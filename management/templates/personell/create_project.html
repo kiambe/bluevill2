@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block content %}
+
+
+<div class="rbt-elements-area bg-color-white rbt-section-gap">
+    <div class="container">
+        <div class="row gy-5 row--30">
+            <div class="card">
+                <div class="card-body login-card-body">                     
+                  <center>
+                  <div class="col-6">
+                  <div class="rbt-contact-form contact-form-style-1 max-width-auto">
+                    <h3 class="title">Create Project</h3>
+                    <form action="{% url 'create_project' %}" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Create Project">
+                    </form>
+                </body>
+                    
+                </div>
+            </center>
+            </div>
+            
+              </div>
+
+         
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

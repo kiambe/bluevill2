@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %} 
+
+{% block content %}
+
+
+<div class="rbt-elements-area bg-color-white rbt-section-gap">
+    <div class="container">
+        <div class="row gy-5 row--30">
+            <div class="card">
+                <div class="card-body login-card-body">                     
+                  <center>
+                  <div class="col-6">
+                  <div class="rbt-contact-form contact-form-style-1 max-width-auto">
+                    <h3 class="title">Client Register</h3>
+                    <form action="{% url 'client_signup' %}" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Signup">
+                    </form>
+                    <p>Already registered!</p>
+                    <a href="{% url 'login' %}">Login Now</a><br>
+                    
+                </div>
+            </center>
+            </div>
+            
+              </div>
+
+         
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Signup</title>
+</head>
+<body>
+    <h1>Client Signup</h1>
+    <form action="{% url 'client_signup' %}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Signup">
+    </form>
+    <p>Already registered!</p>
+    <a href="{% url 'login' %}">Login Now</a><br>
+</body>
+</html>

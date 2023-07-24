@@ -1,0 +1,354 @@
+
+{% extends 'personell/base.html' %}
+{% load static %} 
+
+{% block content %}
+<div class="col-lg-9">
+    <div class="rbt-dashboard-content bg-color-white rbt-shadow-box mb--60">
+        <div class="content">
+            <div class="section-title">
+                <h4 class="rbt-title-style-3">Project: {{ project.name }}</h4>
+            </div>
+            
+        </div>
+    </div>
+    <div class="rbt-dashboard-content bg-color-white rbt-shadow-box mb--60">
+        <div class="content">
+            
+            <div class="row gy-5">
+                <div class="col-lg-12">
+                    <div class="rbt-dashboard-table table-responsive">
+                        <div class="course-details-content">                           
+    
+                            <div class="rbt-inner-onepage-navigation sticky-top mt--30">
+                                <nav class="mainmenu-nav onepagenav">
+                                    <ul class="mainmenu">
+                                        <li class="">
+                                            <a href="#overview">Overview</a>
+                                        </li>
+                                        <li class="current">
+                                            <a href="#status">Status</a>
+                                        </li>
+                                        <li class="">
+                                            <a href="#documents">Documents</a>
+                                        </li>
+                                        <li>
+                                            <a href="#manager">Project Manager</a>
+                                        </li>
+                                        <li>
+                                            <a href="#reports">Reports</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+    
+                            <!-- Start Course Feature Box  -->
+                            <div class="rbt-course-feature-box overview-wrapper rbt-shadow-box mt--30 has-show-more" id="overview">
+                                <div class="rbt-course-feature-inner has-show-more-inner-content">
+                                    <div class="section-title">
+                                        <h4 class="rbt-title-style-3">Project Description</h4>
+                                    </div>
+                                    <p>{{ project.description }}</p>                                   
+                                </div>
+                               
+                            </div>
+                            <!-- End Course Feature Box  -->
+    
+                            <!-- Start Course Content  -->
+                            <div class="course-content rbt-shadow-box status-wrapper mt--30" id="status">
+                                <div class="rbt-course-feature-inner">
+                                    <div class="section-title">
+                                        <h4 class="rbt-title-style-3">Status</h4>
+                                    </div>
+                                    <div class="rbt-accordion-style rbt-accordion-02 accordion">
+                                        <div class="accordion" id="accordionExampleb2">
+    
+                                            <div class="accordion-item card">
+                                                <h2 class="accordion-header card-header" id="headingTwo1">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo1" aria-expanded="true" aria-controls="collapseTwo1">
+                                                        Start Date <span class="rbt-badge-5 ml--10">12th June, 2023</span>
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseTwo1" class="accordion-collapse collapse show" aria-labelledby="headingTwo1" data-bs-parent="#accordionExampleb2">
+                                                    <div class="accordion-body card-body pr--0">
+                                                        <ul class="rbt-course-main-content liststyle">
+                                                            <li>
+                                                                <a href="lesson.html">
+                                                                    <div class="course-content-left">
+                                                                        <i class="feather-play-circle"></i> <span class="text">Pre Contract</span>
+                                                                    </div>
+                                                                    <div class="course-content-right">
+                                                                        <span class="min-lable">30 days</span>
+                                                                        <span class="course-lock"><i class="feather-check-circle"></i></span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+    
+                                                            <li>
+                                                                <a href="lesson.html">
+                                                                    <div class="course-content-left">
+                                                                        <i class="feather-play-circle"></i> <span class="text">Survey</span>
+                                                                    </div>
+                                                                    <div class="course-content-right">
+                                                                        <span class="min-lable">1 week</span>
+                                                                        <span class="course-lock"><i class="feather-check-circle"></i></span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+    
+                                                            <li>
+                                                                <a href="lesson.html">
+                                                                    <div class="course-content-left">
+                                                                        <i class="feather-file-text"></i> <span class="text">Archetectural Designs</span>
+                                                                    </div>
+                                                                    <div class="course-content-right">
+                                                                        <span class="min-lable">2 months</span>
+                                                                        <span class="course-lock"><i class="feather-check-circle"></i></span>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+    
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="accordion-item card">
+                                                <h2 class="accordion-header card-header" id="headingTwo2">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo2" aria-expanded="false" aria-controls="collapseTwo2">
+                                                        Laying Foundation <span class="rbt-badge-5 ml--10">4 weeks</span>
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseTwo2" class="accordion-collapse collapse" aria-labelledby="headingTwo2" data-bs-parent="#accordionExampleb2">
+                                                    <div class="accordion-body card-body pr--0">
+                                                        <ul class="rbt-course-main-content liststyle">
+                                                            <li><a href="lesson.html">
+                                                                    <div class="course-content-left">
+                                                                        <i class="feather-play-circle"></i> <span class="text">Task 1</span>
+                                                                    </div>
+                                                                    <div class="course-content-right">
+                                                                        <span class="course-lock"><i class="feather-check-circle"></i></span>
+                                                                    </div>
+                                                                </a></li>
+                                                            <li><a href="lesson.html">
+                                                                    <div class="course-content-left">
+                                                                        <i class="feather-file-text"></i> <span class="text">Task 2</span>
+                                                                    </div>
+                                                                    <div class="course-content-right">
+                                                                        <span class="course-lock"><i class="feather-check-circle"></i></span>
+                                                                    </div>
+                                                                </a></li>
+    
+                                                            <li><a href="lesson.html">
+                                                                    <div class="course-content-left">
+                                                                        <i class="feather-play-circle"></i> <span class="text">Task 3</span>
+                                                                    </div>
+                                                                    <div class="course-content-right">
+                                                                        <span class="course-lock"><i class="feather-check-circle"></i></span>
+                                                                    </div>
+                                                                </a></li>
+    
+                                                            <li><a href="lesson.html">
+                                                                    <div class="course-content-left">
+                                                                        <i class="feather-file-text"></i> <span class="text">Task 4</span>
+                                                                    </div>
+                                                                    <div class="course-content-right">
+                                                                        <span class="course-lock"><i class="feather-check-circle"></i></span>
+                                                                    </div>
+                                                                </a></li>
+    
+    
+                                                            <li><a href="lesson.html">
+                                                                    <div class="course-content-left">
+                                                                        <i class="feather-play-circle"></i> <span class="text">Task 5</span>
+                                                                    </div>
+                                                                    <div class="course-content-right">
+                                                                        <span class="course-lock"><i class="feather-check-circle"></i></span>
+                                                                    </div>
+                                                                </a></li>
+    
+                                                            <li><a href="lesson.html">
+                                                                    <div class="course-content-left">
+                                                                        <i class="feather-file-text"></i> <span class="text">Task 6</span>
+                                                                    </div>
+                                                                    <div class="course-content-right">
+                                                                        <span class="course-lock"><i class="feather-check-circle"></i></span>
+                                                                    </div>
+                                                                </a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                          
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Course Content  -->
+    
+                            <!-- Start Course Feature Box  -->
+                            <div class="rbt-course-feature-box rbt-shadow-box documents-wrapper mt--30" id="documents">
+                                <div class="row g-5">
+                                    <!-- Start Feture Box  -->
+                                    <div class="col-lg-6">
+                                        <div class="section-title">
+                                            <h4 class="rbt-title-style-3 mb--20">Essential Documents</h4>
+                                        </div>
+                                        <ul class="rbt-list-style-1">
+                                            <li><i class="feather-check"></i>Floor plans</li>
+                                            <li><i class="feather-check"></i>Bidding documents </li>
+                                            <li><i class="feather-check"></i>Architectural drawings </li>
+                                            <li><i class="feather-check"></i>Schedules </li>
+                                            <li><i class="feather-check"></i>City COuncil Approvals </li>
+                                            <li><i class="feather-check"></i>Work orders </li>
+                                            <li><i class="feather-check"></i>Safety reports </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <!-- End Feture Box  -->
+    
+                                    <!-- Start Feture Box  -->
+                                    <div class="col-lg-6">
+                                        <div class="section-title">
+                                            <h4 class="rbt-title-style-3 mb--20">Other Documents</h4>
+                                        </div>
+                                        <ul class="rbt-list-style-1">
+                                            <li><i class="feather-check"></i>Certificates of insurance </li>
+                                            <li><i class="feather-check"></i>Subcontractor applications </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End Feture Box  -->
+                                </div>
+                            </div>
+                            <!-- End Course Feature Box  -->
+    
+                            <!-- Start manager Area  -->
+                            <div class="rbt-instructor rbt-shadow-box manager-wrapper mt--30" id="manager">
+                                <div class="about-author border-0 pb--0 pt--0">
+                                    <div class="section-title mb--30">
+                                        <h4 class="rbt-title-style-3">Project Manager</h4>
+                                    </div>
+                                    <div class="media align-items-center">
+                                        <div class="thumbnail">
+                                            <a href="#">
+                                                <img src="assets/images/testimonial/testimonial-7.jpg" alt="Author Images">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="author-info">
+                                                <h5 class="title">
+                                                    <a class="hover-flip-item-wrapper" href="author.html">{{ project.project_manager }}</a>
+                                                </h5>
+                                                <span class="b3 subtitle">{{ project.project_manager.experience }}</span>
+                                                <ul class="rbt-meta mb--20 mt--10">
+                                                    <li><i class="fa fa-star color-warning"></i>75 Reports <span class="rbt-badge-5 ml--5">4.4 Rating</span></li>
+                                                    <li><i class="feather-users"></i>91 Projects</li>
+                                                    
+                                                </ul>
+                                            </div>
+                                            <div class="content">
+                                                <p class="description">{{ project.project_manager.bio }}</p>
+    
+                                                <ul class="social-icon social-default icon-naked justify-content-start">
+                                                    <li><a href="https://www.facebook.com/">
+                                                            <i class="feather-facebook"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li><a href="https://www.twitter.com">
+                                                            <i class="feather-twitter"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li><a href="https://www.instagram.com/">
+                                                            <i class="feather-instagram"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li><a href="https://www.linkdin.com/">
+                                                            <i class="feather-linkedin"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+    
+                                            </div>
+    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End manager Area  -->
+    
+                            <!-- Start Edu reports List  -->
+                            <div class="rbt-review-wrapper rbt-shadow-box reports-wrapper mt--30" id="reports">
+                                <div class="course-content">
+                                    <div class="section-title">
+                                        <h4 class="rbt-title-style-3">Reports</h4>
+                                    </div>
+                                    <a href="{% url 'create_report' project.id %}"><button>Create Project Report</button></a>
+                                   
+                                </div>
+                            </div>
+                            <!-- End Edu reports List  -->
+    
+                            <div class="about-author-list rbt-shadow-box featured-wrapper mt--30 has-show-more">
+                                
+                                <div class="has-show-more-inner-content rbt-featured-review-list-wrapper">
+                                    {% for report in reports %}
+                                    <div class="rbt-course-review about-author">
+                                        <div class="media">
+                                            <div class="thumbnail">
+                                                <a href="#">
+                                                    <img src="{{ report.image_update }}" alt="Report Image">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="author-info">
+                                                    <h5 class="title">
+                                                        <a class="hover-flip-item-wrapper" href="#">
+                                                            {{ report.title }}
+                                                        </a>
+                                                    </h5>
+                                                    <div class="rating">
+                                                        {{ report.date }}
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    <p class="description">{{ report.report }}</p>
+                                                    <p>{{ report.video_update }}</p>
+                                                    <ul class="social-icon social-default transparent-with-border justify-content-start">
+                                                        {% if approved %}
+                                                        <li><a href="#">
+                                                            <i class="feather-check-circle"></i>
+                                                            </a>
+                                                        </li>
+                                                            
+                                                        {% else %}
+                                                        <li><a href="#">
+                                                            <i class="feather-x-octagon"></i>
+                                                            </a>
+                                                        </li>
+                                                        {% endif %}     
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                                <div class="rbt-show-more-btn">Show More</div>
+                            </div>
+                        </div>
+                      
+                    </div>
+
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    
+
+{% endblock %}
+
